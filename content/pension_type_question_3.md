@@ -15,7 +15,7 @@ tags:
 
 * Aegon
 * Aviva
-* Axa
+* AXA
 * Friends Life
 * L&G
 * LV= (Liverpool Victoria)

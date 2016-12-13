@@ -4,7 +4,9 @@ tags:
   - appointments
 ---
 
-# You might have a defined contribution pension
+# Find out your pension type
+
+## You might have a defined contribution pension
 
 This is a personal or workplace pension arranged by you or your employer. The amount you get depends on how much was paid in and how well the investments have done.
 

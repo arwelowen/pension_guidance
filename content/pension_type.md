@@ -6,12 +6,20 @@ tags:
 
 # Find out your pension type
 
-Check which type of pension you have – this will help you find out if you can have a Pension Wise appointment.
+You can use this service to:
 
-In an appointment you’ll get free guidance from a pensions specialist on how you can take money from your pension pot.
+- check your pension type
+- find out if you can book a Pension Wise appointment
 
-You can speak to us over the phone or face to face somewhere local to you.
+You choose how to take your money if you have a defined contribution (personal or workplace) pension – you can then get free guidance about this from one of our pensions specialists.
+
+^You’ll need to check each pension separately if you have more than one.^
 
 [Start now](/pension-type-question-1){: .button}
 
-^You’ll need to check each pension separately if you have more than one.^
+### Before you start
+
+You can get help with the State Pension at The Pensions Advisory Service.
+
+^You must be aged 50 or over to book a Pension Wise appointment.^
+
