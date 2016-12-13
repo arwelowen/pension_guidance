@@ -52,6 +52,7 @@
   padding-bottom: 14px;
 }
 
+.l-home-row-accent--alt1__content,
 .l-home-row-accent__content,
 .l-home-row-callout__content {
   padding-top: 28px;
@@ -79,6 +80,15 @@
 .l-home-row-accent__content {
   @include media(desktop) {
     background-image: image-url("home/coffee_banner.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 60%;
+  }
+}
+
+.l-home-row-accent--alt1__content {
+  @include media(desktop) {
+    background-image: image-url("home/coffee_banner_alt1.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 60%;
@@ -288,4 +298,31 @@
     max-height: 260px;
     max-width: 260px;
   }
+}
+
+.l-wwh-container {
+  display: flex;
+}
+.l-home__who,
+.l-home__what,
+.l-home__how {
+  align-items: stretch;
+  padding: 28px 15px 14px;
+}
+
+.l-home__who {
+  background: #f08c00;
+}
+
+.l-home__what {
+  background: #5bc6f0;
+}
+
+.l-home__how {
+  background: #95bf21;
+}
+
+.l-options-container {
+  padding-top: 28px;
+  padding-top: 14px;
 }

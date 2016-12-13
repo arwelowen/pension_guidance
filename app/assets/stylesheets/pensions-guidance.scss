@@ -27,3 +27,10 @@
     text-align: right;
   }
 }
+
+.home-intro--big {
+  margin-top: 30px;
+  margin-bottom: 0;
+  @include core-36;
+  color: $color-homepage-grey-text;
+}
