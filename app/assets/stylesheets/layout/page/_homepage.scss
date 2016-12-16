@@ -88,7 +88,7 @@
 
 .l-home-row-accent--alt1__content {
   @include media(desktop) {
-    background-image: image-url("home/coffee_banner_alt1.png");
+    //background-image: image-url("home/coffee_banner_alt1.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 60%;
@@ -308,18 +308,19 @@
 .l-home__how {
   align-items: stretch;
   padding: 28px 15px 14px;
+  border: solid 1px #333;
 }
 
 .l-home__who {
-  background: #f08c00;
+  //background: #f08c00;
 }
 
 .l-home__what {
-  background: #5bc6f0;
+  //background: #5bc6f0;
 }
 
 .l-home__how {
-  background: #95bf21;
+  //background: #95bf21;
 }
 
 .l-options-container {
