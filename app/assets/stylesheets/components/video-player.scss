@@ -270,9 +270,54 @@ $progress-bar-background: #bfc1c3;
 .youtube-video a {
   font-size: .8em;
 
-  color: $color-white;
+  color: $color-black;
 
   &:visited {
-    color: $color-white;
+    color: $color-black;
   }
+}
+
+.youtube-video__video {
+  position: relative;
+  margin-top: 16px;
+
+  @include media(tablet) {
+    margin-top: 0;
+  }
+}
+
+.youtube-video-play {
+  display: none;
+
+  .js-enabled & {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &:hover {
+    .youtube-video-play__arrow {
+      fill: #d62254;
+    }
+
+    .youtube-video-play__bg {
+      fill: $color-white;
+    }
+  }
+}
+
+.youtube-video-play__arrow {
+  fill: $color-white;
+}
+
+.youtube-video-play__bg {
+  fill: #d62254;
 }

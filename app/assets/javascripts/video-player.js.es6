@@ -17,17 +17,32 @@
     }
 
     init() {
+      this.$playButton = $('.js-youtube-play');
+      this.$holdingImage = $('.js-youtube-holding');
+      this.youtubeId = this.$playButton.data('youtube-id');
       this.transcript = {};
       this.transcript.$toggle = $('.js-video-transcript-toggle');
       this.transcript.$copy = $('.js-video-transcript-copy');
       this.transcript.$content = $('.js-video-transcript');
 
-      this.convertLinksToPlayers();
+      this.embedLink();
       this.enableTranscriptToggle();
     }
 
+    embedLink() {
+      this.$playButton.on('click', this.handlePlayButton.bind(this));
+    }
+
+    handlePlayButton() {
+      $(`<a href="https://www.youtube.com/watch?v=${this.youtubeId}">Youtube video</a>`)
+        .insertAfter(this.$playButton);
+      this.$playButton.remove();
+      this.$holdingImage.remove();
+      this.convertLinksToPlayers();
+    }
+
     convertLinksToPlayers() {
-      const $yt_links = $("a[href*='http://www.youtube.com/watch'],a[href*='https://www.youtube.com/watch']");
+      const $yt_links = $('a[href*="http://www.youtube.com/watch"],a[href*="https://www.youtube.com/watch"]');
 
       $.each($yt_links, (i, link) => {
         let $holder = $('<span />');
@@ -37,7 +52,7 @@
         const $mycaptions = $(this).siblings('.captions'),
           captionsf = $($mycaptions).length > 0 ? $($mycaptions).attr('href') : null,
           videoId = $(link).attr('href').split("=")[1],
-          youTubeURL = document.location.protocol + '//www.youtube.com/apiplayer?enablejsapi=1&version=3&playerapiid=';
+          youTubeURL = document.location.protocol + '//www.youtube.com/apiplayer?autoplay=1&enablejsapi=1&version=3&playerapiid=';
 
         $holder.player({
           id: 'yt' + i,
@@ -45,6 +60,10 @@
           captions: captionsf,
           url: youTubeURL,
           flashHeight: '252px'
+        });
+
+        window.NOMENSA.player.PlayerDaemon.getPlayer('yt' + i).onPlayerReady(function() {
+          this.play();
         });
       });
     }
